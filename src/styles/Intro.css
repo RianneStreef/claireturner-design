@@ -1,0 +1,22 @@
+.intro {
+  display: flex;
+}
+
+.intro > * {
+  width: 50%;
+}
+
+.intro-text {
+  padding: 50px;
+  text-align: center;
+}
+
+.intro-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-claire {
+  width: 300px;
+}
