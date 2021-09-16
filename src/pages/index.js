@@ -1,6 +1,7 @@
 import React from "react";
+import Layout from "../components/Layout";
 
-const index = () => {
+const IndexPage = () => {
   return (
     <div>
       <h1>Claire Turner Design</h1>
@@ -8,4 +9,5 @@ const index = () => {
   );
 };
 
-export default index;
+IndexPage.Layout = Layout;
+export default IndexPage;

@@ -22,5 +22,11 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/Layout.jsx`),
+      },
+    },
   ],
 };
