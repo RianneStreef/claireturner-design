@@ -7,7 +7,7 @@ const Intro = () => {
   return (
     <div>
       <h1>Children's Illustrations for all ages</h1>
-      <div className="intro">
+      <div className="intro" id="about">
         <div className="intro-text">
           <p>
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

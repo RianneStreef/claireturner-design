@@ -10,6 +10,8 @@ module.exports = {
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-anchor-links`,
     {
       resolve: "gatsby-plugin-manifest",
       options: {

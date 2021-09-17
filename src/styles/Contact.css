@@ -2,6 +2,13 @@
   display: flex;
 }
 
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+  }
+}
+
+
 .contact > * {
   width: 50%;
   padding: 40px;
