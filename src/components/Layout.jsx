@@ -1,4 +1,7 @@
 import React from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
 import "../styles/global.css";
 
 const Layout = ({ children }) => {
@@ -9,9 +12,9 @@ const Layout = ({ children }) => {
   );
   return (
     <div className="layout">
-      <h2>Header</h2>
+      <Header />
       <section className="content">{childrenWithProps}</section>
-      <h2>Footer</h2>
+      <Footer />
     </div>
   );
 };

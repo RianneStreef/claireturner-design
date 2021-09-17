@@ -1,0 +1,11 @@
+.subscribe-input {
+  background-color: var(--color-highlight);
+}
+
+.subscribe-button {
+  background-color: #fff;
+}
+
+.subscribe-text {
+  text-align: center;
+}

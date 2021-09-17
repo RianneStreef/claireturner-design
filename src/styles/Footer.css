@@ -1,0 +1,26 @@
+.footer {
+  background-color: var(--color-highlight);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer > * {
+  width: 33%;
+}
+
+.heart {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 0;
+  padding-top: 30px;
+}
+
+.footer-title {
+  margin-top: 0;
+  padding-bottom: 30px;
+}
+
+.etsy {
+  text-align: center;
+}

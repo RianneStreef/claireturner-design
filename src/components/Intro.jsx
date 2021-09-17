@@ -6,8 +6,7 @@ import "../styles/Intro.css";
 const Intro = () => {
   return (
     <div>
-      <h1>Claire Turner Design</h1>
-      <h3>Children's Illustrations for all ages</h3>
+      <h1>Children's Illustrations for all ages</h1>
       <div className="intro">
         <div className="intro-text">
           <p>
