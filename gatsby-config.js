@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
@@ -41,6 +45,13 @@ module.exports = {
         endpoint:
           "https://yahoo.us5.list-manage.com/subscribe/post?u=df564ab66c93f2beea766baa2&amp;id=29af27e7d8",
         timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
+      },
+    },
+    {
+      resolve: "gatsby-source-contentful",
+      options: {
+        accessToken: process.env.GATSBY_CONTENTFUL_TOKEN,
+        spaceId: process.env.GATSBY_CONTENTFUL_ID,
       },
     },
   ],
