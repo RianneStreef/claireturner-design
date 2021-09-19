@@ -21,7 +21,7 @@ const Header = () => {
       console.log("rect");
       console.log(rect);
       if (rect.top <= 0) {
-        // nav.classList.add("fixed_navbar");
+        nav.classList.add("fixed_navbar");
         console.log("fixed");
       } else {
         console.log("not fixed");
