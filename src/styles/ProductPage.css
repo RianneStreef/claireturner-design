@@ -35,6 +35,9 @@
 
 .product-description {
   background-color: #fff;
+  margin-bottom: 0;
+  padding: 10px;
+  border-top: 1px solid black;
 }
 
 .product-price {

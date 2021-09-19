@@ -45,7 +45,7 @@ const ProductsPage = (props) => {
         className="product-card"
         style={{
           backgroundImage: `url(${product.productImage.file.url})`,
-          backgroundSize: "contain",
+          backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
         onMouseEnter={() => setIsShown(true)}

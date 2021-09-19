@@ -30,29 +30,29 @@ const Ul = styled.ul`
     color: #000;
     font-family: "Andalemo";
     font-size: 20px;
-    @media (min-width: 768px) {
-      a {
-        color: #000;
-        transition: color 500ms ease-in;
-        text-decoration: none;
-      }
-      a:visited {
-        color: #000;
-        text-decoration: none;
-      }
-      a:hover {
-        color: var(--color-highlight);
-        transition: color 500ms ease-in;
-      }
+    margin: 20px;
 
-      p {
-        margin-top: 0;
-      }
-      justify-content: center;
-      align-items: center;
-      img {
-        width: 30px;
-      }
+    a {
+      color: #000;
+      transition: color 500ms ease-in;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #000;
+      text-decoration: none;
+    }
+    a:hover {
+      color: var(--color-highlight);
+      transition: color 500ms ease-in;
+    }
+
+    p {
+      margin-top: 0;
+    }
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 30px;
     }
   }
   @media (max-width: 768px) {
@@ -89,21 +89,21 @@ const RightNav = (props) => {
   return (
     <Ul open={open}>
       <li className="menu-item" onClick={() => setOpen(!open)}>
-        <AnchorLink to="/#about" title="Our team">
+        <AnchorLink to="/#about" title="About me">
           <span>About Me</span>
         </AnchorLink>
       </li>
       <Dash>-</Dash>
 
       <li className="menu-item" onClick={() => setOpen(!open)}>
-        <AnchorLink to="/#contact" title="Our projects">
+        <AnchorLink to="/#contact" title="Contact">
           <span>Contact</span>
         </AnchorLink>
       </li>
       <Dash>-</Dash>
 
       <li className="menu-item" onClick={() => setOpen(!open)}>
-        <AnchorLink to="/#insta" title="Contact">
+        <AnchorLink to="/#insta" title="Pictures">
           <span>Pictures</span>
         </AnchorLink>
       </li>

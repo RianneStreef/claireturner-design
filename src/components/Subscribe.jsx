@@ -35,7 +35,7 @@ function Subscribe() {
           <div>
             <p className="subscribe-text">Subscribe to my newsletter.</p>
           </div>
-          <div>
+          <div className="subscribe-input-container">
             <input
               type="email"
               name="email"
