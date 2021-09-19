@@ -1,10 +1,33 @@
-.product-card {
+.product-page {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 25%;
 }
+
+.product-category-selection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.category-select-button {
+  font-family: "Andalemo";
+  min-width: 150px;
+  margin: 10px 20px
+}
+
+.product-card {
+  width: 20%;
+  margin: 30px;
+  border: solid 1px black;
+}
+
 
 .product-img {
   width: 100%;
+}
+
+.product-description {
+  background-color: #fff;
 }
