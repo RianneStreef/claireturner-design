@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .product-category-selection {
@@ -18,7 +19,11 @@
 }
 
 .product-card {
-  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 400px;
   margin: 30px;
   border: solid 1px black;
 }
@@ -30,4 +35,16 @@
 
 .product-description {
   background-color: #fff;
+}
+
+.product-price {
+  background-color: #000;
+  color: #fff;
+  padding: 4px;
+  width: 20%;
+  text-align: right;
+}
+
+.product-price:before {
+  content: '€';
 }

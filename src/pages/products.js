@@ -6,6 +6,9 @@ import "../styles/ProductPage.css";
 
 const ProductsPage = (props) => {
   const { data } = props;
+
+  const [isShown, setIsShown] = useState(false);
+
   const allProducts = data.allContentfulProduct.nodes;
 
   const emptyQuery = "";
@@ -43,13 +46,16 @@ const ProductsPage = (props) => {
         style={{
           backgroundImage: `url(${product.productImage.file.url})`,
           backgroundSize: "contain",
-          backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
+        onMouseEnter={() => setIsShown(true)}
+        onMouseLeave={() => setIsShown(false)}
       >
-        <p className="product-price">{product.productPrice}</p>
+        <span className="product-price">{product.productPrice}</span>
         {/* <h3 className="product-name">{product.productName}</h3> */}
-        <p className="hide product-description">{product.productDescription}</p>
+        {isShown && (
+          <p className="product-description">{product.productDescription}</p>
+        )}
       </div>
     );
   });
