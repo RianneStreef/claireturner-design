@@ -50,9 +50,11 @@ function Contact() {
             </div>
           </form>
         </div>
-        <div className="contact-form-text">
-          <p>Bla die bla die bla... </p>
-        </div>
+        <p className="contact-form-text">
+          I am really happy to listen to your ideas for personalised presents,
+          so please don't hesitate to contact me for any special orders and
+          prices. I will try my hardest to help you produce the perfect gift.{" "}
+        </p>
       </div>
     </div>
   );
