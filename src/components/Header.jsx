@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Burger from "./nav/Burger";
 import banner from "../images/banner.jpg";
 
@@ -9,24 +9,20 @@ const Header = () => {
 
   useEffect(() => {
     document.addEventListener("scroll", function () {
-      const nav = document.getElementById("navbar");
-      let rect = nav.getBoundingClientRect();
-      if (rect.top <= 0) {
-        // setIsHeaderSticky(true);
-        console.log("fixed");
-      } else {
-        console.log("not fixed");
+      const banner = document.getElementById("banner");
+      const bannerHeight = banner.clientHeight;
+      const bannerPosition = window.scrollY;
 
-        window.onscroll = function () {
-          myFunction();
-        };
-        function myFunction() {
-          let banner = document.getElementById("banner");
-          let bannerHeight = banner.clientHeight;
-          if (document.body.scrollTop < bannerHeight) {
-            setIsHeaderSticky(false);
-          }
-        }
+      console.log(bannerPosition);
+
+      if (!isHeaderSticky && bannerPosition <= bannerHeight) {
+        setIsHeaderSticky(false);
+        console.log("not fixed");
+      }
+
+      if (!isHeaderSticky && bannerPosition > bannerHeight) {
+        setIsHeaderSticky(true);
+        console.log("fixed");
       }
     });
   });

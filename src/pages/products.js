@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
 import { graphql } from "gatsby";
 
 import "../styles/ProductPage.css";
@@ -7,7 +10,7 @@ import "../styles/ProductPage.css";
 const ProductsPage = (props) => {
   const { data } = props;
 
-  const [isShown, setIsShown] = useState(false);
+  let [isShown, setIsShown] = useState(false);
 
   const allProducts = data.allContentfulProduct.nodes;
 
@@ -62,6 +65,7 @@ const ProductsPage = (props) => {
 
   return (
     <>
+      <Header />
       <div className="product-category-selection">
         <button
           className="category-select-button"
@@ -114,6 +118,7 @@ const ProductsPage = (props) => {
         </button>
       </div>
       <div className="product-page">{productList}</div>
+      <Footer />
     </>
   );
 };
