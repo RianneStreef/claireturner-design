@@ -12,7 +12,7 @@ const Ul = styled.ul`
   display: flex;
   align-items: flex-end;
   z-index: 10;
-  background-color: #dddbdb;
+  background-color: #fff;
   margin-top: 0;
   padding-left: 0;
 
@@ -31,6 +31,7 @@ const Ul = styled.ul`
     font-family: "Andalemo";
     font-size: 20px;
     margin: 20px;
+    padding-right: 25px;
 
     a {
       color: #000;
@@ -64,7 +65,7 @@ const Ul = styled.ul`
     right: 0;
     height: 100vh;
     width: 300px;
-    padding-top: 3.5rem;
+    padding-top: 5rem;
     transition: transform 0.3s ease-in-out;
   }
 `;

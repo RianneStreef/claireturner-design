@@ -8,9 +8,8 @@ import { graphql } from "gatsby";
 import "../styles/ProductPage.css";
 
 const ProductsPage = (props) => {
+  console.log(props);
   const { data } = props;
-
-  let [isShown, setIsShown] = useState(false);
 
   const allProducts = data.allContentfulProduct.nodes;
 
@@ -41,6 +40,8 @@ const ProductsPage = (props) => {
   const hasSearchResults = filteredData && query !== emptyQuery;
   const products = hasSearchResults ? filteredData : allProducts;
 
+  let [isShown, setIsShown] = useState(false);
+
   const productList = products.map((product) => {
     return (
       <div
@@ -53,9 +54,9 @@ const ProductsPage = (props) => {
         }}
         onMouseEnter={() => setIsShown(true)}
         onMouseLeave={() => setIsShown(false)}
+        onClick={() => setIsShown(!isShown)}
       >
         <span className="product-price">{product.productPrice}</span>
-        {/* <h3 className="product-name">{product.productName}</h3> */}
         {isShown && (
           <p className="product-description">{product.productDescription}</p>
         )}

@@ -15,15 +15,16 @@ const Footer = () => {
       </div>
 
       <div className="etsy">
-        Visit my{" "}
-        <a
-          href="https://claireturnerdesign.patternbyetsy.com/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          {" "}
-          Etsy shop
-        </a>
+        <p>
+          Visit my{" "}
+          <a
+            href="https://claireturnerdesign.patternbyetsy.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Etsy shop
+          </a>
+        </p>
       </div>
     </div>
   );

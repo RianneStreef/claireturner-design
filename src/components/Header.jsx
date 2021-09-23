@@ -6,22 +6,22 @@ import "../styles/Header.css";
 
 const Header = () => {
   const [isHeaderSticky, setIsHeaderSticky] = React.useState(false);
+  const [isHeaderStickyPlaceholder, setIsHeaderStickyPlaceholder] =
+    React.useState(false);
 
   useEffect(() => {
     document.addEventListener("scroll", function () {
       const banner = document.getElementById("banner");
       const bannerHeight = banner.clientHeight;
       const bannerPosition = window.scrollY;
-
-      console.log(bannerPosition);
-
       if (!isHeaderSticky && bannerPosition <= bannerHeight) {
         setIsHeaderSticky(false);
+        setIsHeaderStickyPlaceholder(false);
         console.log("not fixed");
       }
-
       if (!isHeaderSticky && bannerPosition > bannerHeight) {
         setIsHeaderSticky(true);
+        setIsHeaderStickyPlaceholder(true);
         console.log("fixed");
       }
     });
@@ -36,6 +36,9 @@ const Header = () => {
       >
         <Burger />
       </nav>
+      <div
+        className={` ${isHeaderStickyPlaceholder ? "navbar-placeholder" : ""}`}
+      />
     </div>
   );
 };

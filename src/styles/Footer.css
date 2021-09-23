@@ -35,9 +35,15 @@
 
 .etsy {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .etsy {
+    flex-direction: column; 
+    justify-content: flex-end;
+  }
 }
 
 .etsy a {
