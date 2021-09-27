@@ -12,6 +12,7 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-anchor-links`,
+    `gatsby-plugin-fontawesome-css`,
     {
       resolve: "gatsby-plugin-manifest",
       options: {

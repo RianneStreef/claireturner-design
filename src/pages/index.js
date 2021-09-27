@@ -25,5 +25,3 @@ const IndexPage = () => {
 
 IndexPage.Layout = Layout;
 export default IndexPage;
-
-// insta on extra page or on index between
