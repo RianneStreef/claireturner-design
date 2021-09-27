@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/Insta.css";
 
 import { Helmet } from "react-helmet";
 
@@ -13,6 +14,7 @@ const Insta = () => {
         ></script>
       </Helmet>
       <div
+        className="insta"
         id="insta"
         data-mc-src="a18fa560-8939-48e8-8966-63ed95aafd54#instagram"
       ></div>{" "}
