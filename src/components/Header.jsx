@@ -17,18 +17,20 @@ const Header = (props) => {
   const [isHeaderStickyPlaceholder, setIsHeaderStickyPlaceholder] =
     React.useState(false);
 
-  document.addEventListener("scroll", function () {
-    const banner = document.getElementById("banner");
-    const bannerHeight = banner.clientHeight;
-    const bannerPosition = window.scrollY;
-    if (!isHeaderSticky && bannerPosition <= bannerHeight) {
-      setIsHeaderSticky(false);
-      setIsHeaderStickyPlaceholder(false);
-    }
-    if (!isHeaderSticky && bannerPosition > bannerHeight) {
-      setIsHeaderSticky(true);
-      setIsHeaderStickyPlaceholder(true);
-    }
+  useEffect(() => {
+    document.addEventListener("scroll", function () {
+      const banner = document.getElementById("banner");
+      const bannerHeight = banner.clientHeight;
+      const bannerPosition = window.scrollY;
+      if (!isHeaderSticky && bannerPosition <= bannerHeight) {
+        setIsHeaderSticky(false);
+        setIsHeaderStickyPlaceholder(false);
+      }
+      if (!isHeaderSticky && bannerPosition > bannerHeight) {
+        setIsHeaderSticky(true);
+        setIsHeaderStickyPlaceholder(true);
+      }
+    });
   });
 
   return (
