@@ -1,17 +1,25 @@
 import React from "react";
 
+import { content } from "../content/languages.js";
+
 import "../styles/Contact.css";
 
-function Contact() {
+function Contact(props) {
+  let { language, languageToUse } = props;
+
+  language === "english"
+    ? (languageToUse = content.english)
+    : (languageToUse = content.french);
+
   return (
     <div id="contact">
-      <h2>Contact</h2>
+      <h2>{languageToUse.contact}</h2>
       <div className="contact">
         <div className="contact-form">
           <form name="contact" method="post" data-netlify="true">
             <input type="hidden" name="form-name" value="contact" />
             <p className="form-items">
-              <label htmlFor="name">Name:</label> <br />
+              <label htmlFor="name">{languageToUse.name}:</label> <br />
               <input
                 className="input"
                 type="text"
@@ -21,7 +29,7 @@ function Contact() {
               />
             </p>
             <p className="form-items">
-              <label htmlFor="email">Email:</label> <br />
+              <label htmlFor="email">{languageToUse.email}:</label> <br />
               <input
                 className="input"
                 type="email"
@@ -31,7 +39,7 @@ function Contact() {
               />
             </p>
             <p className="form-items">
-              <label htmlFor="message">Message:</label> <br />
+              <label htmlFor="message">{languageToUse.message}:</label> <br />
               <textarea
                 id="message"
                 name="message"
@@ -45,16 +53,12 @@ function Contact() {
                 type="submit"
                 value="Submit message"
               >
-                Send
+                {languageToUse.send}
               </button>
             </div>
           </form>
         </div>
-        <p className="contact-form-text">
-          I am really happy to listen to your ideas for personalised presents,
-          so please don't hesitate to contact me for any special orders and
-          prices. I will try my hardest to help you produce the perfect gift.{" "}
-        </p>
+        <p className="contact-form-text"> {languageToUse.contactMessage}</p>
       </div>
     </div>
   );

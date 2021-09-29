@@ -4,8 +4,7 @@ import styled from "styled-components";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { Link } from "gatsby";
 
-// import flagEn from "../../images/icon-en.png";
-// import flagFr from "../../images/icon-fr.png";
+import { content } from "../../content/languages";
 
 const Ul = styled.ul`
   list-style: none;
@@ -15,7 +14,6 @@ const Ul = styled.ul`
   background-color: #fff;
   margin-top: 0;
   padding-left: 0;
-
   @media (min-width: 768px) {
     justify-content: center;
     align-items: center;
@@ -32,7 +30,6 @@ const Ul = styled.ul`
     font-size: 20px;
     margin: 20px;
     padding-right: 25px;
-
     a {
       color: #000;
       transition: color 500ms ease-in;
@@ -46,7 +43,6 @@ const Ul = styled.ul`
       color: var(--color-highlight);
       transition: color 500ms ease-in;
     }
-
     p {
       margin-top: 0;
     }
@@ -70,11 +66,6 @@ const Ul = styled.ul`
   }
 `;
 
-// const Flag = styled.img`
-//   width: 30px;
-//   margin-right: 20px;
-// `;
-
 const Dash = styled.span`
   width: 30px;
   margin: 0 20px;
@@ -86,53 +77,40 @@ const Dash = styled.span`
 
 const RightNav = (props) => {
   let { open, setOpen } = props;
+  let { language, languageToUse } = props;
+
+  language === "english"
+    ? (languageToUse = content.english)
+    : (languageToUse = content.french);
 
   return (
     <Ul open={open}>
       <li className="menu-item" onClick={() => setOpen(!open)}>
         <AnchorLink to="/#about" title="About me">
-          <span>About Me</span>
+          <span>{languageToUse.about}</span>
         </AnchorLink>
       </li>
       <Dash>-</Dash>
 
       <li className="menu-item" onClick={() => setOpen(!open)}>
         <AnchorLink to="/#contact" title="Contact">
-          <span>Contact</span>
+          <span>{languageToUse.contact}</span>
         </AnchorLink>
       </li>
       <Dash>-</Dash>
 
       <li className="menu-item" onClick={() => setOpen(!open)}>
         <AnchorLink to="/#insta" title="Pictures">
-          <span>Pictures</span>
+          <span>{languageToUse.pictures}</span>
         </AnchorLink>
       </li>
       <Dash>-</Dash>
 
       <li>
         <Link to="/products" onClick={() => setOpen(!open)}>
-          Products
+          {languageToUse.products}
         </Link>
       </li>
-
-      {/* <li>
-        {languageToUse.language === "english" ? (
-          <Flag
-            className="language-icon"
-            src={flagFr}
-            onClick={() => handleSetLanguage("french")}
-            alt="Set language to French"
-          />
-        ) : (
-          <Flag
-            className="language-icon"
-            src={flagEn}
-            onClick={() => handleSetLanguage("english")}
-            alt="Set language to English"
-          />
-        )}
-      </li> */}
     </Ul>
   );
 };

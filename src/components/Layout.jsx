@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "../styles/global.css";
 
 const Layout = ({ children }) => {
+  let [language, setLanguage] = useState("english");
+  let languageToUse = "english";
+
   const childrenWithProps = React.Children.map(children, (child) =>
     React.cloneElement(child, {
-      // props to drill
+      language,
+      setLanguage,
+      languageToUse,
     })
   );
   return (

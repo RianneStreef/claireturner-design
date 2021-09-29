@@ -7,7 +7,15 @@ import { graphql } from "gatsby";
 
 import "../styles/ProductPage.css";
 
+import { content } from "../content/languages";
+
 const ProductsPage = (props) => {
+  let { language, setLanguage, languageToUse } = props;
+
+  language === "english"
+    ? (languageToUse = content.english)
+    : (languageToUse = content.french);
+
   console.log(props);
   const { data } = props;
 
@@ -66,7 +74,7 @@ const ProductsPage = (props) => {
 
   return (
     <>
-      <Header />
+      <Header language={language} languageToUse={languageToUse} />
       <div className="product-category-selection">
         <button
           className="category-select-button"
@@ -119,7 +127,11 @@ const ProductsPage = (props) => {
         </button>
       </div>
       <div className="product-page">{productList}</div>
-      <Footer />
+      <Footer
+        language={language}
+        setLanguage={setLanguage}
+        languageToUse={languageToUse}
+      />
     </>
   );
 };

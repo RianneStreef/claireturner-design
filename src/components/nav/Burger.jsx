@@ -37,8 +37,9 @@ const StyledBurger = styled.div`
   }
 `;
 
-const Burger = () => {
+const Burger = (props) => {
   const [open, setOpen] = useState(false);
+  let { language, languageToUse } = props;
 
   return (
     <>
@@ -47,7 +48,12 @@ const Burger = () => {
         <div className="big-margin" />
         <div className="small-margin" />
       </StyledBurger>
-      <RightNav open={open} setOpen={setOpen} />
+      <RightNav
+        open={open}
+        setOpen={setOpen}
+        language={language}
+        languageToUse={languageToUse}
+      />
     </>
   );
 };

@@ -8,17 +8,34 @@ import Footer from "../components/Footer";
 
 import "../styles/IndexPage.css";
 
-const IndexPage = () => {
+import { content } from "../content/languages";
+
+const IndexPage = (props) => {
+  let { language, setLanguage, languageToUse } = props;
+
+  language === "english"
+    ? (languageToUse = content.english)
+    : (languageToUse = content.french);
+
   return (
     <div>
       <div className="landing">
-        <Header />
+        <Header
+          language={language}
+          setLanguage={setLanguage}
+          languageToUse={languageToUse}
+        />
         <h1>Children's Illustrations for all ages</h1>
+        <div className="bunting-animation"></div>
       </div>
-      <Intro />
-      <Contact />
-      <Insta />
-      <Footer />
+      <Intro language={language} languageToUse={languageToUse} />
+      <Contact language={language} languageToUse={languageToUse} />
+      <Insta language={language} languageToUse={languageToUse} />
+      <Footer
+        language={language}
+        setLanguage={setLanguage}
+        languageToUse={languageToUse}
+      />
     </div>
   );
 };

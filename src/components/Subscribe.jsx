@@ -1,11 +1,19 @@
 import addToMailchimp from "gatsby-plugin-mailchimp";
 import React, { useState } from "react";
 
+import { content } from "../content/languages";
+
 import "../styles/Subscribe.css";
 
-function Subscribe() {
+function Subscribe(props) {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+
+  let { language, languageToUse } = props;
+
+  language === "english"
+    ? (languageToUse = content.english)
+    : (languageToUse = content.french);
 
   function errorHandling(data) {
     // your error handling
@@ -26,14 +34,16 @@ function Subscribe() {
       {submitted ? (
         <form>
           <div className="subscribe-text">
-            <h2>Successfully subscribed!</h2>
-            <p>Thank your for your interest in my content.</p>
+            <h2>{languageToUse.subscribed}</h2>
+            <p>{languageToUse.subscribedMessage}</p>
           </div>
         </form>
       ) : (
         <form>
           <div>
-            <p className="subscribe-text">Subscribe to my newsletter.</p>
+            <p className="subscribe-text">
+              {languageToUse.subscribeNewsletter}
+            </p>
           </div>
           <div className="subscribe-input-container">
             <input
@@ -54,7 +64,7 @@ function Subscribe() {
                 aria-label="Subscribe"
                 onClick={() => handleSubmit()}
               >
-                Subscribe
+                {languageToUse.subscribe}
               </button>
             </div>
           </div>

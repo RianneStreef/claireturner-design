@@ -17,9 +17,8 @@ const Legal = (props) => {
           et de son suivi :
         </p>
         <p>
-          <strong>Propriétaire</strong> : Claire Turner Design -
-          {/* Numero de Siret */}
-          – 183 Chemin de la Pirraz Talloires 74290
+          <strong>Propriétaire</strong> : Claire Turner Design - 808 581 292
+          00022 – 183 Chemin de la Pirraz Talloires 74290
           <br />
           <strong>Créateur</strong> :{" "}
           <a target="blank" href="http://www.vts-webdesign.com/">
