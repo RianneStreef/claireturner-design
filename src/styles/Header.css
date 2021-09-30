@@ -10,7 +10,7 @@
 }
 
 .nav {
-  height: 55px;
+  height: 70px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -19,6 +19,7 @@
 @media (min-width: 768px) {
   .nav {
     padding: 0 20px;
+    height: 55px;
   }
 }
 

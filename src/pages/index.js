@@ -8,7 +8,6 @@ import Footer from "../components/Footer";
 
 import "../styles/IndexPage.css";
 
-import bunting from "../images/bunting.jpeg";
 import { content } from "../content/languages";
 
 const IndexPage = (props) => {

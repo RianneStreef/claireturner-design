@@ -48,8 +48,6 @@ const ProductsPage = (props) => {
   const hasSearchResults = filteredData && query !== emptyQuery;
   const products = hasSearchResults ? filteredData : allProducts;
 
-  let [isShown, setIsShown] = useState(false);
-
   const productList = products.map((product) => {
     return (
       <div
@@ -60,14 +58,9 @@ const ProductsPage = (props) => {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
-        onMouseEnter={() => setIsShown(true)}
-        onMouseLeave={() => setIsShown(false)}
-        onClick={() => setIsShown(!isShown)}
       >
         <span className="product-price">{product.productPrice}</span>
-        {isShown && (
-          <p className="product-description">{product.productDescription}</p>
-        )}
+        <p className="product-description">{product.productDescription}</p>
       </div>
     );
   });
