@@ -40,9 +40,7 @@ const Header = (props) => {
         id="navbar"
         className={`nav ${isHeaderSticky ? " fixed-navbar" : ""}`}
       >
-        <div className="burger">
-          <Burger language={language} languageToUse={languageToUse} />
-        </div>
+        <Burger language={language} languageToUse={languageToUse} />
       </nav>
       <div
         className={` ${isHeaderStickyPlaceholder ? "navbar-placeholder" : ""}`}

@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 
 import "../styles/IndexPage.css";
 
+import bunting from "../images/bunting.jpeg";
 import { content } from "../content/languages";
 
 const IndexPage = (props) => {
@@ -26,7 +27,7 @@ const IndexPage = (props) => {
           languageToUse={languageToUse}
         />
         <h1>Children's Illustrations for all ages</h1>
-        <div className="bunting-animation"></div>
+        <div className="bunting" />
       </div>
       <Intro language={language} languageToUse={languageToUse} />
       <Contact language={language} languageToUse={languageToUse} />

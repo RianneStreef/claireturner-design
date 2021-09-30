@@ -16,6 +16,12 @@
   justify-content: center;
 }
 
+@media (min-width: 768px) {
+  .nav {
+    padding: 0 20px;
+  }
+}
+
 .fixed-navbar {
   position: inline-block;
 }
@@ -25,15 +31,11 @@
   width: 100%;
 }
 
-@media (min-width: 768px) {
-  .fixed-navbar {
-    position: fixed;
-    z-index: 1000;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-color: #fff;
-
-
+.fixed-navbar {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  top: 0;    
   }
-}
+
+

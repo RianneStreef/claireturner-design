@@ -1,20 +1,11 @@
-import React, { useEffect } from "react";
-import styled from "styled-components";
+import React from "react";
 import Burger from "./Burger";
-
-const Nav = styled.nav`
-  height: 55px;
-  width: 100%;
-  padding: 0 20px;
-  display: flex;
-  justify-content: center;
-`;
 
 const Navbar = () => {
   return (
-    <Nav>
+    <nav>
       <Burger />
-    </Nav>
+    </nav>
   );
 };
 
