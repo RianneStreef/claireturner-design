@@ -16,7 +16,7 @@ const StyledBurger = styled.div`
     justify-content: space-around;
     flex-flow: column nowrap;
     right: 20px;
-    margin-top: 10px;
+    margin-top: 20px;
     top: ${({ open }) => (open ? "10px" : null)};
   }
   div {
