@@ -12,7 +12,7 @@ function Contact(props) {
     : (languageToUse = content.french);
 
   return (
-    <div id="contact">
+    <div id="contact" className="contact-container">
       <h2>{languageToUse.contact}</h2>
       <div className="contact">
         <div className="contact-form">
