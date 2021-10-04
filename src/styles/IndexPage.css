@@ -13,7 +13,7 @@
   left: 0;
   bottom: 0px;
   overflow: hidden;
-  background-image: url(../images/bunting.jpg);
+  background-image: url(../images/buntingSMALL.jpg);
   background-size: contain;
   animation: clouds_animation 75s linear infinite;
 }
