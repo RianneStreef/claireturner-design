@@ -16,8 +16,14 @@
 }
 
 .intro-text {
-  padding: 50px;
+  padding: 20px;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .intro-text {
+    padding: 50px;
+  }
 }
 
 .intro-image-container {

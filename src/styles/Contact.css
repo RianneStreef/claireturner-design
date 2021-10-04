@@ -6,10 +6,9 @@
 
 @media (max-width: 768px) {
   .contact-container {
-    margin-top: 30px;
+    margin: 30px 10px;
 
   }
-  
 }
 
 .contact {
@@ -56,5 +55,11 @@ form {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 60px;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .contact-form-text{
+    padding: 60px;
+  }
 }
