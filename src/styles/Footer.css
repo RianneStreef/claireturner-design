@@ -40,6 +40,15 @@
   text-align: center;
 }
 
+.etsy a {
+  text-decoration: none;
+}
+
+.arrow{
+  width: 4%;
+  margin-left: 10px;
+}
+
 @media (min-width: 768px) {
   .etsy {
     flex-direction: column; 
@@ -91,6 +100,7 @@
   padding: 0 10px;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding-left: 30px;
 }
 
@@ -100,6 +110,9 @@
   width: 50%;
   margin: auto;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .language-option p {

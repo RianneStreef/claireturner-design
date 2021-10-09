@@ -11,6 +11,7 @@ import Copyright from "./Copyright";
 
 import { content } from "../content/languages";
 
+import arrow from "../images/arrow-right.png";
 import flagEn from "../images/icon-en.png";
 import flagFr from "../images/icon-fr.png";
 
@@ -56,6 +57,7 @@ const Footer = (props) => {
               rel="noreferrer"
             >
               Etsy shop
+              <img src={arrow} className="arrow" />
             </a>
           </p>
           <div className="set-language-footer">
