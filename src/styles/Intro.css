@@ -1,6 +1,6 @@
 .intro {
   display: flex;
-
+  flex-direction: row-reverse;
 }
 
 @media (max-width: 768px) {
