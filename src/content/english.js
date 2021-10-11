@@ -29,6 +29,9 @@ export const english = {
   bunting: "Bunting",
   all: "All",
 
+  shellsIntro:
+    "Shells and shanties is pleased to present a Claire Turner Design collection of kids and adults beach bags, towels and accessories. Lovingly hand-made.",
+
   visit: "Visit my",
 
   subscribed: "Successfully subscribed!",
