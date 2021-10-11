@@ -29,6 +29,9 @@ export const french = {
   bunting: "Bunting",
   all: "Tout",
 
+  shellsIntro:
+    "Shells and shanties is pleased to present a @claireturnerdesign collection of kids and adults beach bags, towels and accessories. Lovingly hand-made.",
+
   visit: "Visitez mon ",
 
   subscribed: "Successfully subscribed!",
