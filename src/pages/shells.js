@@ -34,6 +34,8 @@ const ShellsPage = (props) => {
           languageToUse={languageToUse}
         />
         <h1>Shells and Shanties</h1>
+        <div className="bunting-shells" />
+
         <div className="shells-video-container">
           <video controls autoplay className="shells-video">
             <source src={promoVideo} type="video/mp4" />
