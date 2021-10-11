@@ -40,7 +40,10 @@ const ShellsPage = (props) => {
           </video>
         </div>
         <p className="shells-intro">{languageToUse.shellsIntro}</p>
-        <div data-mc-src="9181c193-d5e2-450f-9fe7-cca8106b39a6#instagram"></div>
+        <div
+          className="insta"
+          data-mc-src="9181c193-d5e2-450f-9fe7-cca8106b39a6#instagram"
+        />
       </div>
       <Footer
         language={language}
