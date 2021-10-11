@@ -59,8 +59,7 @@ const ProductsPage = (props) => {
             backgroundImage: `url(${product.productImage.file.url})`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
-            // backgroundPosition: "center",
-            backgroundPosition: `${product.alignImage}`,
+            backgroundPosition: "center",
           }}
         >
           <span className="product-price">{product.productPrice}</span>
