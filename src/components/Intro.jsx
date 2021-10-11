@@ -1,5 +1,5 @@
 import React from "react";
-import IntroClaire from "../images/IntroClaire.png";
+import IntroClaire from "../images/IntroClaire.jpeg";
 
 import { content } from "../content/languages";
 

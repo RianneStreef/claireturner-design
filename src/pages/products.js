@@ -59,11 +59,18 @@ const ProductsPage = (props) => {
             backgroundImage: `url(${product.productImage.file.url})`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
+            // backgroundPosition: "center",
+            backgroundPosition: `${product.alignImage}`,
           }}
         >
           <span className="product-price">{product.productPrice}</span>
-          <p className="product-description">{product.productDescription}</p>
+          {language === "french" ? (
+            <p className="product-description">
+              {product.productDescriptionFrench}
+            </p>
+          ) : (
+            <p className="product-description">{product.productDescription}</p>
+          )}
         </div>
       </div>
     );
@@ -82,49 +89,49 @@ const ProductsPage = (props) => {
           onClick={handleInputChange}
           value="watercolors"
         >
-          Watercolors
+          {language === "french" ? "Aquarelles" : "Watercolors"}
         </button>
         <button
           className="category-select-button"
           onClick={handleInputChange}
           value="digital prints"
         >
-          Digital Prints
+          {language === "french" ? "Impressions Numériques" : "Digital Prints"}
         </button>
         <button
           className="category-select-button"
           onClick={handleInputChange}
           value="ink drawings"
         >
-          Ink Drawing
+          {language === "french" ? "Sessins à l'encre" : "Ink Drawing"}
         </button>
         <button
           className="category-select-button"
           onClick={handleInputChange}
           value="acrylic"
         >
-          Acrylic
+          {language === "french" ? "Acrylique" : "Acrylic"}
         </button>
         <button
           className="category-select-button"
           onClick={handleInputChange}
           value="craft kits"
         >
-          Craft Kits
+          {language === "french" ? "Craft Kits" : "Craft Kits"}
         </button>
         <button
           className="category-select-button"
           onClick={handleInputChange}
           value="bunting"
         >
-          Bunting
+          {language === "french" ? "Guirlande" : "Bunting"}
         </button>
         <button
           className="category-select-button"
           onClick={handleInputChange}
           value=""
         >
-          All
+          {language === "french" ? "Tout" : " All"}
         </button>
       </div>
       <div className="product-page">{productList}</div>
@@ -141,11 +148,13 @@ export const productQuery = graphql`
     allContentfulProduct {
       nodes {
         productDescription
+        productDescriptionFrench
         productImage {
           file {
             url
           }
         }
+        alignImage
         productName
         productPrice
         productCategory
