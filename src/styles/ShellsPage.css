@@ -8,7 +8,15 @@
   max-height: 80vh;
 }
 
+
+
 .shells-intro {
-  margin: 50px 100px;
+  margin: 50px 20px;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .shells-intro {
+    margin: 50px 100px;
+  }
 }
