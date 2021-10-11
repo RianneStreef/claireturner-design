@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import "../styles/IndexPage.css";
 
 import { content } from "../content/languages";
+import { Helmet } from "react-helmet";
 
 const IndexPage = (props) => {
   let { language, setLanguage, languageToUse } = props;
@@ -19,6 +20,10 @@ const IndexPage = (props) => {
 
   return (
     <div>
+      <Helmet>
+        <title>Claire Turner Design</title>
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       <div className="landing">
         <Header
           language={language}

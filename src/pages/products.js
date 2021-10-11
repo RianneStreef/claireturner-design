@@ -8,6 +8,7 @@ import { graphql } from "gatsby";
 import "../styles/ProductPage.css";
 
 import { content } from "../content/languages";
+import { Helmet } from "react-helmet";
 
 const ProductsPage = (props) => {
   let { language, setLanguage, languageToUse } = props;
@@ -50,23 +51,30 @@ const ProductsPage = (props) => {
 
   const productList = products.map((product) => {
     return (
-      <div
-        key={product.id}
-        className="product-card"
-        style={{
-          backgroundImage: `url(${product.productImage.file.url})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <span className="product-price">{product.productPrice}</span>
-        <p className="product-description">{product.productDescription}</p>
+      <div key={product.id}>
+        <h2 className="product-name">{product.productName}</h2>
+        <div
+          className="product-card"
+          style={{
+            backgroundImage: `url(${product.productImage.file.url})`,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          }}
+        >
+          <span className="product-price">{product.productPrice}</span>
+          <p className="product-description">{product.productDescription}</p>
+        </div>
       </div>
     );
   });
 
   return (
     <>
+      <Helmet>
+        <title>Products</title>
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       <Header language={language} languageToUse={languageToUse} />
       <div className="product-category-selection">
         <button

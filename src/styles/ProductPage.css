@@ -28,6 +28,11 @@
   border: solid 1px black;
 }
 
+.product-name {
+  text-align: center;
+  text-transform: capitalize;
+  max-width: 300px;
+}
 
 .product-img {
   width: 100%;
