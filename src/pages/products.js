@@ -128,6 +128,13 @@ const ProductsPage = (props) => {
         <button
           className="category-select-button"
           onClick={handleInputChange}
+          value="shells"
+        >
+          Shells and Shanties
+        </button>
+        <button
+          className="category-select-button"
+          onClick={handleInputChange}
           value=""
         >
           {language === "french" ? "Tout" : " All"}
