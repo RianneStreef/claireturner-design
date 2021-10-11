@@ -28,9 +28,19 @@ button {
   min-width: 100px;
 }
 
+.hidden-mobile {
+  display: none;
+}
+
 .button-container {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .hidden-mobile {
+    display: block;
+  }
 }

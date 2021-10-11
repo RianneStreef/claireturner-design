@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import "../styles/ShellsPage.css";
 
 import promoVideo from "../images/promo.mp4";
+import Huckleberry from "../images/huckleberry.jpg";
 
 import { content } from "../content/languages";
 import { Helmet } from "react-helmet";
@@ -35,13 +36,18 @@ const ShellsPage = (props) => {
         />
         <h1>Shells and Shanties</h1>
         <div className="bunting-shells" />
-
-        <div className="shells-video-container">
-          <video controls autoplay className="shells-video">
-            <source src={promoVideo} type="video/mp4" />
-          </video>
+        <div className="images-container-shells">
+          <div className="hidden-mobile" />
+          <div className="shells-video-container">
+            <video controls autoplay className="shells-video">
+              <source src={promoVideo} type="video/mp4" />
+            </video>
+          </div>
+          <img src={Huckleberry} className="shells-drawing-desktop" />
         </div>
         <p className="shells-intro">{languageToUse.shellsIntro}</p>
+        <img src={Huckleberry} className="shells-drawing-mobile" />
+
         <div
           className="insta"
           data-mc-src="9181c193-d5e2-450f-9fe7-cca8106b39a6#instagram"

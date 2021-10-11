@@ -16,6 +16,15 @@
   100%  {background-position: -2122px 0;}
 }
 
+.images-container-shells {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+
+
 .shells-video-container {
   display: flex;
   justify-content: center;
@@ -27,7 +36,13 @@
   margin-top: 50px
 }
 
+.shells-drawing-desktop {
+  display: none;
+}
 
+.shells-drawing-mobile {
+  width: 100%; 
+}
 
 .shells-intro {
   margin: 50px 20px;
@@ -37,5 +52,17 @@
 @media (min-width: 768px) {
   .shells-intro {
     margin: 50px 100px;
+  }
+
+  .images-container-shells > * {
+    width: 30%;
+  }
+
+  .shells-drawing-desktop {
+    display: inline;
+    height: 20%;
+  }
+  .shells-drawing-mobile {
+    display: none;
   }
 }
