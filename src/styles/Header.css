@@ -40,4 +40,8 @@
   background-color: #fff;
   }
 
+  .menu-item-text {
+    align-items: center !important;
+  }
+
 

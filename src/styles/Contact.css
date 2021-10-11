@@ -4,6 +4,20 @@
   margin: 0 50px;
 }
 
+.contact-header {
+  margin-bottom: 20px;
+}
+
+.stamp-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.stamp {
+  width: 10%;
+}
+
 @media (max-width: 768px) {
   .contact-container {
     margin: 30px 10px;
@@ -51,12 +65,28 @@ form {
   width: 100%;
 }
 
+.context-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .contact-form-text{
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 20px;
+}
+
+.signature-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 100px;
+}
+
+.signature {
+  width: 20%;
 }
 
 @media (min-width: 768px) {

@@ -14,6 +14,9 @@ const Ul = styled.ul`
   background-color: #fff;
   margin-top: 0;
   padding-left: 0;
+  li {
+    padding-right: 25px;
+  }
   @media (min-width: 768px) {
     justify-content: center;
     align-items: center;
@@ -29,7 +32,7 @@ const Ul = styled.ul`
     font-family: "Andalemo";
     font-size: 20px;
     margin: 20px;
-    padding-right: 25px;
+    padding-right: 0;
     a {
       color: #000;
       transition: color 500ms ease-in;
@@ -87,7 +90,7 @@ const RightNav = (props) => {
     <Ul open={open}>
       <li className="menu-item" onClick={() => setOpen(!open)}>
         <AnchorLink to="/#about" title="About me">
-          <span>{languageToUse.about}</span>
+          <span className="menu-item-text">{languageToUse.about}</span>
         </AnchorLink>
       </li>
       <Dash>-</Dash>
