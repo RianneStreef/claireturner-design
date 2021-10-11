@@ -1,0 +1,14 @@
+.shells-video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shells-video {
+  max-height: 80vh;
+}
+
+.shells-intro {
+  margin: 50px 100px;
+  text-align: center;
+}

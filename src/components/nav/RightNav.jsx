@@ -111,6 +111,12 @@ const RightNav = (props) => {
           {languageToUse.products}
         </Link>
       </li>
+      <Dash>-</Dash>
+      <li>
+        <Link to="/shells" onClick={() => setOpen(!open)}>
+          Shells and Shanties
+        </Link>
+      </li>
     </Ul>
   );
 };
