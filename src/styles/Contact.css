@@ -6,6 +6,7 @@
 
 .contact-header {
   margin-bottom: 20px;
+  margin-top: 20px
 }
 
 .stamp-container {
@@ -15,13 +16,12 @@
 }
 
 .stamp {
-  width: 10%;
+  width: 30%;
 }
 
 @media (max-width: 768px) {
   .contact-container {
     margin: 30px 10px;
-
   }
 }
 
@@ -44,6 +44,9 @@
 @media (min-width: 768px) {
   .contact > * {
     width: 50%;
+  }
+  .stamp {
+    width: 10%;
   }
 }
 
@@ -86,11 +89,14 @@ form {
 }
 
 .signature {
-  width: 20%;
+  width: 70%;
 }
 
 @media (min-width: 768px) {
   .contact-form-text{
     padding: 60px;
   }
+  .signature {
+    width: 20%;
+  } 
 }
