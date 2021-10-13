@@ -153,7 +153,6 @@ export const productQuery = graphql`
             url
           }
         }
-        alignImage
         productName
         productPrice
         productCategory
