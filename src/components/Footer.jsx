@@ -30,6 +30,7 @@ const Footer = (props) => {
   function handleSetLanguage(language) {
     setLanguage(language);
     setIsShown(false);
+    localStorage.setItem("languageInStorage", language);
   }
 
   let [isShown, setIsShown] = useState(false);

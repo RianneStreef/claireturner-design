@@ -1,10 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "../styles/global.css";
 
 const Layout = ({ children }) => {
   let [language, setLanguage] = useState("english");
-  let languageToUse = "english";
+  let languageToUse = "";
+  let languageInStorage = "";
+
+  useEffect(() => {
+    if (localStorage.getItem("languageInStorage")) {
+      setLanguage(languageInStorage);
+      console.log("language found");
+      console.log(languageInStorage);
+    }
+  }, []);
 
   const childrenWithProps = React.Children.map(children, (child) =>
     React.cloneElement(child, {
