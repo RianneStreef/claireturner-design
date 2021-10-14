@@ -23,6 +23,7 @@
 @media (min-width: 768px) {
   .intro-text {
     padding: 50px;
+    margin-top: 50px;
   }
 }
 
@@ -30,6 +31,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 }
 
 .intro-claire {
