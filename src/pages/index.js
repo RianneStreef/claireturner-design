@@ -23,6 +23,15 @@ const IndexPage = (props) => {
       <Helmet>
         <title>Claire Turner Design</title>
         <meta name="robots" content="index, follow" />
+        <meta
+          name="description"
+          content="Children's Illustrations for all ages made by Claire Turner, in Talloires, France."
+        />
+        <meta
+          name="keywords"
+          content="children's illustrations, animal illustrations, Talloires, France, Shell and Shanties, watercolors, digital prints, ink drawing, acrylic, bunting"
+        />
+        <link rel="canonical" href="https://www.claireturner-design.com/" />
       </Helmet>
       <div className="landing">
         <Header
