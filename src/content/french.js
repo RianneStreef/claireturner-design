@@ -21,22 +21,21 @@ export const french = {
   contactMessage:
     "I am really happy to listen to your ideas for personalised presents, so please don't hesitate to contact me for any special orders and prices. I will try my hardest to help you produce the perfect gift.",
 
-  waterColors: "Watercolors",
-  digital: "Digital Prints",
-  ink: "Ink Drawings",
-  acrylic: "Acrylic",
+  waterColors: "Aquarelles",
+  digital: "Impressions Numériques",
+  ink: "Dessins à l'encre",
+  acrylic: "Acrylique",
   craftKits: "Craft kits",
   bunting: "Bunting",
   all: "Tout",
 
   shellsIntro:
-    "Shells and shanties is pleased to present a Claire Turner Design collection of kids and adults beach bags, towels and accessories. Lovingly hand-made.",
-
+    "Shells and Shanties a le plaisir de présenter une collection Claire Turner Design, sacs de plage, serviettes et accessoires pour enfants et adultes. Faits à la main.",
   visit: "Visitez mon ",
 
-  subscribed: "Successfully subscribed!",
-  subscribedMessage: "Thank you for your interest in my products.",
-  subscribeNewsletter: "Subscribe to my newsletter",
+  subscribed: "Inscription réussie !",
+  subscribedMessage: "Merci pour votre intérêt.",
+  subscribeNewsletter: "Abonnez-vous à ma newsletter.",
   subscribe: "M'abonner",
 
   copyright: "Claire Turner Design - Tous droits réservés.",
