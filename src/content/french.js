@@ -19,8 +19,7 @@ export const french = {
     " Merci pour votre soutien les gars et j'espère de nombreuses années à partager mes illustrations avec vous.",
 
   contactMessage:
-    "I am really happy to listen to your ideas for personalised presents, so please don't hesitate to contact me for any special orders and prices. I will try my hardest to help you produce the perfect gift.",
-
+    "Je suis vraiment contente d'écouter vos idées de cadeaux personnalisés, alors n'hésitez pas à me contacter pour toute commande spéciale et prix. Je ferai de mon mieux pour vous aider à produire le cadeau parfait.",
   waterColors: "Aquarelles",
   digital: "Impressions Numériques",
   ink: "Dessins à l'encre",
