@@ -34,7 +34,7 @@ function Contact(props) {
                 name="contact"
                 value="contact"
               />
-              <p class="hidden">
+              <p className="hidden">
                 <label>
                   Don’t fill this out if you’re human:{" "}
                   <input name="bot-field" />
