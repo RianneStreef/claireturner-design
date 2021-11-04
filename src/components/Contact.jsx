@@ -22,7 +22,24 @@ function Contact(props) {
         </div>
         <div className="contact">
           <div className="contact-form">
-            <form name="contact" method="post" data-netlify="true">
+            <form
+              name="contact"
+              method="post"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
+              <input
+                className="contact-input"
+                type="hidden"
+                name="contact"
+                value="contact"
+              />
+              <p class="hidden">
+                <label>
+                  Don’t fill this out if you’re human:{" "}
+                  <input name="bot-field" />
+                </label>
+              </p>
               <input type="hidden" name="form-name" value="contact" />
               <p className="form-items">
                 <label htmlFor="name">{languageToUse.name}:</label> <br />

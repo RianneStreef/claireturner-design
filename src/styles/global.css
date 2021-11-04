@@ -39,6 +39,10 @@ button {
   justify-content: center;
 }
 
+.hidden {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .hidden-mobile {
     display: block;
