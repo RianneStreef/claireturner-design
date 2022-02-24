@@ -32,6 +32,9 @@ export const english = {
   shellsIntro:
     "Shells and shanties is pleased to present a Claire Turner Design collection of kids and adults beach bags, towels and accessories. Lovingly hand-made.",
 
+  logoIntro:
+    "Looking for a logo for your business? These are some examples that I made! ",
+
   visit: "Visit my",
 
   subscribed: "Successfully subscribed!",

@@ -30,6 +30,10 @@ export const french = {
 
   shellsIntro:
     "Shells and Shanties a le plaisir de présenter une collection Claire Turner Design, sacs de plage, serviettes et accessoires pour enfants et adultes. Faits à la main.",
+
+  logoIntro:
+    "Looking for a logo for your business? These are some examples that I made! ",
+
   visit: "Visitez mon ",
 
   subscribed: "Inscription réussie !",
