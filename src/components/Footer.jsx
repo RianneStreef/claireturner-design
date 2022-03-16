@@ -50,7 +50,7 @@ const Footer = (props) => {
           <div className="footer-link-column "></div>
         </div>
         <div className="social-links">
-          <a
+          {/* <a
             href="https://www.facebook.com/Claire-Turner-Design-726633950744427/"
             target="_blank"
           >
@@ -61,7 +61,11 @@ const Footer = (props) => {
             target="_blank"
           >
             <img src={instagram} alt="instagram link" className="social-link" />
-          </a>
+          </a> */}
+          <p>
+            {languageToUse.visit}
+            <a href="">Etsy Shop! </a>
+          </p>
         </div>
         <Subscribe />
       </div>
