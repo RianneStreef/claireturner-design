@@ -34,7 +34,7 @@ export const french = {
 
   subscribed: "Inscription réussie !",
   subscribedMessage: "Merci pour votre intérêt.",
-  subscribeNewsletter: "Abonnez-vous à ma newsletter.",
+  subscribeNewsletter: "Abonnez-vous à ma newsletter:",
   subscribe: "M'abonner",
 
   copyright: "Claire Turner Design - Tous droits réservés.",
