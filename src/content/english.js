@@ -36,7 +36,7 @@ export const english = {
 
   subscribed: "Successfully subscribed!",
   subscribedMessage: "Thank you for your interest in my products.",
-  subscribeNewsletter: "Subscribe to my newsletter",
+  subscribeNewsletter: "Subscribe to my newsletter:",
   subscribe: "Subscribe",
 
   copyright: "Claire Turner Design - All rights reserved.",
