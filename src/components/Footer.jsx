@@ -35,20 +35,7 @@ const Footer = (props) => {
     <div className="footer">
       <div className="footer-links-total">
         <img src={footerLogo} alt="Logo" className="footer-logo" />
-
-        <div className="footer-links">
-          <div className="footer-link-column">
-            <Link to="/#about">{languageToUse.about}</Link>
-            <Link to="/#insta">{languageToUse.pictures}</Link>
-            <Link to="/#contact">{languageToUse.contact}</Link>
-          </div>
-          <div className="footer-link-column footer-link-column-middle">
-            <Link to="/products">Originals</Link>
-            <Link to="/shells">Shells and Shanties</Link>
-          </div>
-
-          <div className="footer-link-column "></div>
-        </div>
+        <Subscribe />
         <div className="social-links">
           {/* <a
             href="https://www.facebook.com/Claire-Turner-Design-726633950744427/"
@@ -66,32 +53,25 @@ const Footer = (props) => {
             {languageToUse.visit}
             <a href="">Etsy Shop! </a>
           </p>
-        </div>
-        <Subscribe />
-      </div>
-      <div className="contact-footer">
-        <div>
-          <p>Check out: </p>
-          <p>Friends</p>
-          <p>or partners</p>
-        </div>
-        <div className="set-language-footer">
-          <img
-            src={flagEn}
-            onClick={() => handleSetLanguage("english")}
-            className={`flag ${
-              languageToUse.language === "english" ? "opaque" : "fade"
-            } `}
-          />
-          <img
-            src={flagFr}
-            onClick={() => handleSetLanguage("french")}
-            className={`flag ${
-              languageToUse.language === "french" ? "opaque" : "fade"
-            } `}
-          />
+          <div className="set-language-footer">
+            <img
+              src={flagEn}
+              onClick={() => handleSetLanguage("english")}
+              className={`flag ${
+                languageToUse.language === "english" ? "opaque" : "fade"
+              } `}
+            />
+            <img
+              src={flagFr}
+              onClick={() => handleSetLanguage("french")}
+              className={`flag ${
+                languageToUse.language === "french" ? "opaque" : "fade"
+              } `}
+            />
+          </div>
         </div>
       </div>
+
       <Copyright />
     </div>
   );
