@@ -3,6 +3,8 @@ import Layout from "../components/Layout";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+import { Link } from "gatsby";
+
 import { graphql } from "gatsby";
 
 import "../styles/CoursesPage.css";
@@ -16,19 +18,27 @@ const ProductsPage = (props) => {
   const { data } = props;
 
   let courses = data.allContentfulCourse.nodes;
+  console.log(courses);
+  console.log("language");
+  console.log(language);
 
   language === "english"
     ? (languageToUse = content.english)
     : (languageToUse = content.french);
 
-  const coursesList = courses.map((course) => {
-    return (
-      <div key={course.id} className="course-description">
-        <h2 className="course-name">{course.name}</h2>
-        <img className="course-flyer" src={course.image.file.url} />
-      </div>
-    );
-  });
+  const coursesList = courses
+    .filter((course) => course.language === languageToUse.language)
+    .map((course) => {
+      return (
+        <div key={course.id} className="courses-list">
+          <img className="course-flyer" src={course.image.file.url} />
+          <img className="course-flyer" src={course.image.file.url} />
+          <img className="course-flyer" src={course.image.file.url} />
+          <img className="course-flyer" src={course.image.file.url} />
+          <img className="course-flyer" src={course.image.file.url} />
+        </div>
+      );
+    });
 
   return (
     <>
@@ -46,6 +56,11 @@ const ProductsPage = (props) => {
         <link rel="canonical" href="https://www.claireturner-design.com/" />
       </Helmet>
       <Header language={language} languageToUse={languageToUse} />
+      <p className="subscribe-link">
+        {languageToUse.click}
+        <Link to="/#contact">{languageToUse.here}</Link>
+        {languageToUse.toSubscribe}
+      </p>
       {coursesList}
       <Footer
         language={language}
@@ -65,6 +80,7 @@ export const coursesQuery = graphql`
           }
         }
         name
+        language
       }
     }
   }

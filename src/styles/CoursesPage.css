@@ -1,11 +1,17 @@
-.course-description {
+.courses-list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin: 50px;
 }
 
 .course-flyer {
-  width: 30%;
+  width: 20%;
+  margin: 50px;
+}
+
+.subscribe-link {
+  text-align: center;
 }
