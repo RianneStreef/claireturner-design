@@ -5,6 +5,7 @@ export const english = {
   contact: "Contact",
   pictures: "Pictures",
   products: "Products",
+  courses: "Art Classes",
 
   name: "Name",
   email: "Email",

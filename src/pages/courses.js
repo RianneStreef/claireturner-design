@@ -30,12 +30,21 @@ const ProductsPage = (props) => {
     .filter((course) => course.language === languageToUse.language)
     .map((course) => {
       return (
-        <div key={course.id} className="courses-list">
-          <img className="course-flyer" src={course.image.file.url} />
-          <img className="course-flyer" src={course.image.file.url} />
-          <img className="course-flyer" src={course.image.file.url} />
-          <img className="course-flyer" src={course.image.file.url} />
-          <img className="course-flyer" src={course.image.file.url} />
+        <div
+          className="course-flyer"
+          key={course.id}
+          style={{
+            backgroundImage: `url(${course.image.file.url})`,
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            height: "30vw",
+            width: "20vw",
+          }}
+        >
+          <div className={`full-banner ${!course.full ? "hidden" : ""}`}>
+            FULL
+          </div>
         </div>
       );
     });
@@ -61,7 +70,7 @@ const ProductsPage = (props) => {
         <Link to="/#contact">{languageToUse.here}</Link>
         {languageToUse.toSubscribe}
       </p>
-      {coursesList}
+      <div className="courses-list">{coursesList}</div>
       <Footer
         language={language}
         setLanguage={setLanguage}
@@ -72,15 +81,16 @@ const ProductsPage = (props) => {
 };
 export const coursesQuery = graphql`
   query coursesQuery {
-    allContentfulCourse {
+    allContentfulCourse(sort: { fields: startDate }) {
       nodes {
         image {
           file {
             url
           }
         }
-        name
         language
+        full
+        startDate
       }
     }
   }

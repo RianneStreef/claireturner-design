@@ -102,17 +102,17 @@ const RightNav = (props) => {
       </li>
       <Dash>-</Dash>
 
-      <li className="menu-item" onClick={() => setOpen(!open)}>
-        <AnchorLink to="/#insta" title="Pictures">
-          <span>{languageToUse.pictures}</span>
-        </AnchorLink>
-      </li>
-      <Dash>-</Dash>
-
       <li>
         <Link to="/products" onClick={() => setOpen(!open)}>
           {languageToUse.products}
         </Link>
+      </li>
+      <Dash>-</Dash>
+
+      <li className="menu-item" onClick={() => setOpen(!open)}>
+        <AnchorLink to="/courses" title="Pictures">
+          <span>{languageToUse.courses}</span>
+        </AnchorLink>
       </li>
       <Dash>-</Dash>
       <li>

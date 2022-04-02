@@ -8,10 +8,23 @@
 }
 
 .course-flyer {
-  width: 20%;
-  margin: 50px;
+  width: 100%;
+  margin: 30px;
+}
+
+.full-banner {
+  background-color: black;
+  color: white;
+  margin-top: 50px;
 }
 
 .subscribe-link {
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .course-flyer {
+    width: 20%;
+    margin: 50px;
+  }
 }

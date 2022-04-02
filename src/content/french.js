@@ -5,6 +5,7 @@ export const french = {
   contact: "Contact",
   pictures: "Photos",
   products: "Produits",
+  courses: "Atelier & Stage",
 
   name: "Nom",
   email: "Email",
