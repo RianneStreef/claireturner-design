@@ -17,7 +17,6 @@ const ProductsPage = (props) => {
     ? (languageToUse = content.english)
     : (languageToUse = content.french);
 
-  console.log(props);
   const { data } = props;
 
   const allProducts = data.allContentfulProduct.nodes;

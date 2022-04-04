@@ -27,7 +27,6 @@ button {
   background-color: rgba(0, 0, 0, 0.05);
   font-family: "Montserrat", sans-serif;
   padding: 10px;
-  min-width: 100px;
 }
 
 .hidden-mobile {
@@ -47,7 +46,10 @@ button {
 
 .flag {
   width: 25px;
-  margin: 5px;
+}
+
+.flag:hover {
+  cursor: pointer;
 }
 
 .opaque {
@@ -56,6 +58,13 @@ button {
 
 .fade {
   opacity: 50%;
+}
+
+.invisible-button {
+  border: none;
+  background-color: transparent;
+  width: 20px;
+  margin: 10px;
 }
 
 @media (min-width: 768px) {

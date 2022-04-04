@@ -104,11 +104,6 @@
   align-items: center;
 }
 
-.set-language-footer img {
-  width: 20px;
-  margin: 10px;
-}
-
 .copyright {
   text-align: center;
   display: flex;

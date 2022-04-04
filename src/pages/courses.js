@@ -18,9 +18,6 @@ const ProductsPage = (props) => {
   const { data } = props;
 
   let courses = data.allContentfulCourse.nodes;
-  console.log(courses);
-  console.log("language");
-  console.log(language);
 
   language === "english"
     ? (languageToUse = content.english)
@@ -33,6 +30,7 @@ const ProductsPage = (props) => {
         <div
           className="course-flyer"
           key={course.id}
+          alt=""
           style={{
             backgroundImage: `url(${course.image.file.url})`,
             backgroundSize: "contain",

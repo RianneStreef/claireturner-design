@@ -9,8 +9,8 @@ import { content } from "../content/languages";
 
 import flagEn from "../images/icon-en.png";
 import flagFr from "../images/icon-fr.png";
-import instagram from "../images/instagram.svg";
-import facebook from "../images/facebook.svg";
+// import instagram from "../images/instagram.svg";
+// import facebook from "../images/facebook.svg";
 import footerLogo from "../images/footerLogo.png";
 
 const Footer = (props) => {
@@ -23,7 +23,6 @@ const Footer = (props) => {
   function handleSetLanguage(language) {
     setLanguage(language);
     localStorage.setItem("languageInStorage", language);
-    console.log(languageToUse);
   }
 
   return (
@@ -46,23 +45,37 @@ const Footer = (props) => {
           </a> */}
           <p>
             {languageToUse.visit}
-            <a href="">Etsy Shop! </a>
+            <a href="https://claireturnerdesign.patternbyetsy.com/">
+              Etsy Shop!{" "}
+            </a>
           </p>
           <div className="set-language-footer">
-            <img
-              src={flagEn}
+            <button
               onClick={() => handleSetLanguage("english")}
-              className={`flag ${
-                languageToUse.language === "english" ? "opaque" : "fade"
-              } `}
-            />
-            <img
-              src={flagFr}
+              onKeyPress={() => handleSetLanguage("english")}
+              className="invisible-button"
+            >
+              <img
+                src={flagEn}
+                alt="english"
+                className={`flag ${
+                  languageToUse.language === "english" ? "opaque" : "fade"
+                } `}
+              />
+            </button>
+            <button
               onClick={() => handleSetLanguage("french")}
-              className={`flag ${
-                languageToUse.language === "french" ? "opaque" : "fade"
-              } `}
-            />
+              onKeyPress={() => handleSetLanguage("french")}
+              className="invisible-button"
+            >
+              <img
+                src={flagFr}
+                alt="français"
+                className={`flag ${
+                  languageToUse.language === "french" ? "opaque" : "fade"
+                } `}
+              />
+            </button>
           </div>
         </div>
       </div>
