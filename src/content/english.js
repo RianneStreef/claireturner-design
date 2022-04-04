@@ -36,6 +36,7 @@ export const english = {
   click: "Click ",
   here: "here",
   toSubscribe: " to subscribe!",
+  full: "Full",
 
   visit: "Visit my ",
 

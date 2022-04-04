@@ -35,6 +35,7 @@ export const french = {
   click: "Clique ",
   here: "ici",
   toSubscribe: " pour enregistrer!",
+  full: "Complet",
 
   visit: "Visitez mon ",
 

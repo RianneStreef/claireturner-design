@@ -45,6 +45,19 @@ button {
   display: none;
 }
 
+.flag {
+  width: 25px;
+  margin: 5px;
+}
+
+.opaque {
+  opacity: 100%;
+}
+
+.fade {
+  opacity: 50%;
+}
+
 @media (min-width: 768px) {
   .hidden-mobile {
     display: block;

@@ -43,7 +43,7 @@ const ProductsPage = (props) => {
           }}
         >
           <div className={`full-banner ${!course.full ? "hidden" : ""}`}>
-            FULL
+            {languageToUse.full}
           </div>
         </div>
       );

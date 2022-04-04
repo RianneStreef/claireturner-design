@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-
-import { Link } from "gatsby";
+import React from "react";
 
 import "../styles/Footer.css";
 
@@ -9,7 +7,6 @@ import Copyright from "./Copyright";
 
 import { content } from "../content/languages";
 
-import arrow from "../images/arrow-right.png";
 import flagEn from "../images/icon-en.png";
 import flagFr from "../images/icon-fr.png";
 import instagram from "../images/instagram.svg";
@@ -25,17 +22,15 @@ const Footer = (props) => {
 
   function handleSetLanguage(language) {
     setLanguage(language);
-    setIsShown(false);
     localStorage.setItem("languageInStorage", language);
+    console.log(languageToUse);
   }
-
-  let [isShown, setIsShown] = useState(false);
 
   return (
     <div className="footer">
       <div className="footer-links-total">
         <img src={footerLogo} alt="Logo" className="footer-logo" />
-        <Subscribe />
+        <Subscribe language={language} languageToUse={languageToUse} />
         <div className="social-links">
           {/* <a
             href="https://www.facebook.com/Claire-Turner-Design-726633950744427/"
@@ -72,7 +67,7 @@ const Footer = (props) => {
         </div>
       </div>
 
-      <Copyright />
+      <Copyright language={language} languageToUse={languageToUse} />
     </div>
   );
 };
