@@ -45,6 +45,12 @@ export const english = {
   subscribeNewsletter: "Subscribe to my newsletter:",
   subscribe: "Subscribe",
 
+  inscriptionRequest: "Inscription Request",
+  dates: "Dates",
+  price: "Prix",
+  age: "Age",
+  class: "Class",
+
   copyright: "Claire Turner Design - All rights reserved.",
   mentionsLegal: "Legal mentions",
   copyright3: "Created by ",

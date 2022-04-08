@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-import { Link } from "gatsby";
+import stamp from "../images/stamp.jpg";
 
 import { graphql } from "gatsby";
 
@@ -12,12 +12,17 @@ import "../styles/CoursesPage.css";
 import { content } from "../content/languages";
 import { Helmet } from "react-helmet";
 
+import ReactMarkdown from "react-markdown";
+
 const ProductsPage = (props) => {
   let { language, setLanguage, languageToUse } = props;
 
   const { data } = props;
 
   let courses = data.allContentfulCourse.nodes;
+  console.log(courses);
+  console.log(courses);
+  console.log(courses[0].description.description);
 
   language === "english"
     ? (languageToUse = content.english)
@@ -28,20 +33,50 @@ const ProductsPage = (props) => {
     .map((course) => {
       return (
         <div
-          className="course-flyer"
+          className="course-description"
           key={course.id}
-          alt=""
-          style={{
-            backgroundImage: `url(${course.image.file.url})`,
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            height: "30vw",
-            width: "20vw",
-          }}
+          // style={{
+          //   backgroundImage: `url(${course.image.file.url})`,
+          //   backgroundSize: "contain",
+          //   backgroundRepeat: "no-repeat",
+          //   backgroundPosition: "center",
+          //   height: "30vw",
+          //   width: "20vw",
+          // }}
         >
-          <div className={`full-banner ${!course.full ? "hidden" : ""}`}>
+          {/* <div className={`full-banner ${!course.full ? "hidden" : ""}`}>
             {languageToUse.full}
+          </div> */}
+          <div className="class-card">
+            <div className="class-card-header">
+              <h3>{course.title}</h3>
+              {course.full ? (
+                <span className="full">{languageToUse.full}</span>
+              ) : null}
+            </div>
+            <div className="inner-class-card">
+              <div className="course-info">
+                <h4>{languageToUse.dates}:</h4>
+                <p>{course.dates}</p>
+                <h4>{languageToUse.price}:</h4>
+
+                <p>{course.price}</p>
+                {course.description && (
+                  <ReactMarkdown>
+                    <div>{course.description.description}</div>
+                  </ReactMarkdown>
+                )}
+
+                {course.description && (
+                  <ReactMarkdown children={course.description.description} />
+                )}
+              </div>
+              <img
+                src={course.image.file.url}
+                alt="course flyer"
+                className="course-flyer"
+              />
+            </div>
           </div>
         </div>
       );
@@ -50,7 +85,7 @@ const ProductsPage = (props) => {
   return (
     <>
       <Helmet>
-        <title>Courses</title>
+        <title>{languageToUse.courses}</title>
         <meta name="robots" content="index, follow" />
         <meta
           name="description"
@@ -63,11 +98,86 @@ const ProductsPage = (props) => {
         <link rel="canonical" href="https://www.claireturner-design.com/" />
       </Helmet>
       <Header language={language} languageToUse={languageToUse} />
-      <p className="subscribe-link">
-        {languageToUse.click}
-        <Link to="/#contact">{languageToUse.here}</Link>
-        {languageToUse.toSubscribe}
-      </p>
+      <div className="contact-container">
+        <div className="stamp-container">
+          <img src={stamp} className="stamp" />
+        </div>
+        <h2>{languageToUse.inscriptionRequest}</h2>
+
+        <div className="class-form">
+          <form
+            name="art-class"
+            method="post"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+          >
+            <input
+              className="class-input"
+              type="hidden"
+              name="contact"
+              value="contact"
+            />
+            <p className="hidden">
+              <label>
+                Don’t fill this out if you’re human: <input name="bot-field" />
+              </label>
+            </p>
+            <input type="hidden" name="form-name" value="class" />
+            <p className="form-items">
+              <label htmlFor="name">{languageToUse.name}:</label> <br />
+              <input
+                className="input"
+                type="text"
+                id="name"
+                name="name"
+                required
+              />
+            </p>
+            <p className="form-items">
+              <label htmlFor="age">{languageToUse.age}:</label> <br />
+              <input
+                className="input"
+                type="number"
+                id="age"
+                name="age"
+                required
+              />
+            </p>
+            <p className="form-items">
+              <label htmlFor="class">{languageToUse.class}:</label> <br />
+              <input className="input" type="text" id="class" name="class" />
+            </p>
+            <p className="form-items">
+              <label htmlFor="email">{languageToUse.email}:</label> <br />
+              <input
+                className="input"
+                type="email"
+                id="email"
+                name="email"
+                required
+              />
+            </p>
+            <p className="form-items">
+              <label htmlFor="message">{languageToUse.message}:</label> <br />
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows="8"
+              ></textarea>
+            </p>
+            <div className="button-container">
+              <button
+                className="custom_button"
+                type="submit"
+                value="Submit message"
+              >
+                {languageToUse.send}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
       <div className="courses-list">{coursesList}</div>
       <Footer
         language={language}
@@ -81,14 +191,21 @@ export const coursesQuery = graphql`
   query coursesQuery {
     allContentfulCourse(sort: { fields: startDate }) {
       nodes {
+        id
+        dates
+        description {
+          description
+        }
+        full
         image {
           file {
             url
           }
         }
         language
-        full
-        startDate
+        location
+        title
+        price
       }
     }
   }
