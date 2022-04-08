@@ -5,6 +5,7 @@ export const english = {
   contact: "Contact",
   pictures: "Pictures",
   products: "Products",
+  courses: "Art Classes",
 
   name: "Name",
   email: "Email",
@@ -32,12 +33,23 @@ export const english = {
   shellsIntro:
     "Shells and shanties is pleased to present a Claire Turner Design collection of kids and adults beach bags, towels and accessories. Lovingly hand-made.",
 
-  visit: "Visit my",
+  click: "Click ",
+  here: "here",
+  toSubscribe: " to subscribe!",
+  full: "Full",
+
+  visit: "Visit my ",
 
   subscribed: "Successfully subscribed!",
   subscribedMessage: "Thank you for your interest in my products.",
-  subscribeNewsletter: "Subscribe to my newsletter",
+  subscribeNewsletter: "Subscribe to my newsletter:",
   subscribe: "Subscribe",
+
+  inscriptionRequest: "Inscription Request",
+  dates: "Dates",
+  price: "Prix",
+  age: "Age",
+  class: "Class",
 
   copyright: "Claire Turner Design - All rights reserved.",
   mentionsLegal: "Legal mentions",

@@ -1,21 +1,23 @@
 @font-face {
-  font-family: 'Andalemo';
-  src: local('Andalemo'), url(../fonts/andalemo.ttf) format('truetype');
+  font-family: "Andalemo";
+  src: local("Andalemo"), url(../fonts/andalemo.ttf) format("truetype");
 }
 
 :root {
   --color-highlight: #dddbdb;
-  
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 100;
   line-height: 25px;
 }
 
-h1, h2, h3, h4 {
-  font-family: 'Andalemo';
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Andalemo";
   text-align: center;
   margin: auto;
 }
@@ -23,9 +25,8 @@ h1, h2, h3, h4 {
 button {
   border: none;
   background-color: rgba(0, 0, 0, 0.05);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding: 10px;
-  min-width: 100px;
 }
 
 .hidden-mobile {
@@ -41,6 +42,29 @@ button {
 
 .hidden {
   display: none;
+}
+
+.flag {
+  width: 25px;
+}
+
+.flag:hover {
+  cursor: pointer;
+}
+
+.opaque {
+  opacity: 100%;
+}
+
+.fade {
+  opacity: 50%;
+}
+
+.invisible-button {
+  border: none;
+  background-color: transparent;
+  width: 20px;
+  margin: 10px;
 }
 
 @media (min-width: 768px) {

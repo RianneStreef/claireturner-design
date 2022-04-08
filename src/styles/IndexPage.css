@@ -1,10 +1,8 @@
-
-
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .landing {
     height: 100vh;
   }
-}
+} */
 
 .bunting {
   width: 100%;
@@ -19,9 +17,12 @@
 }
 
 @keyframes clouds_animation {
-  
-  0%  {background-position: 0 0;}
-  100%  {background-position: -2122px 0;}
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -2122px 0;
+  }
 }
 
 h1 {

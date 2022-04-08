@@ -51,7 +51,7 @@ function Subscribe(props) {
               name="email"
               id="mail"
               label="email-input"
-              placeholder="Your e-mail address"
+              placeholder=""
               onChange={(e) => setEmail(e.target.value)}
               className="subscribe-input"
             />
