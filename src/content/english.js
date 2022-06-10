@@ -47,7 +47,7 @@ export const english = {
 
   inscriptionRequest: "Inscription Request",
   dates: "Dates",
-  price: "Prix",
+  price: "Price",
   age: "Age",
   class: "Class",
 
